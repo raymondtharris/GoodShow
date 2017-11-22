@@ -9,14 +9,14 @@
 import Foundation
 import Photos
 
-var photoArray:PHFetchResult<PHAsset> = PHFetchResult()
+//var photoArray:PHFetchResult<PHAsset> = PHFetchResult()
 
 class goodshowEvent{
     var name: String = ""
 }
 
-
-func loadPhotoLibrary() -> PHFetchResult<PHAsset> {
+/*
+mutating func loadPhotoLibrary(photoLib:PHFetchResult<PHAsset>) -> Void {
     PHPhotoLibrary.requestAuthorization({(status:PHAuthorizationStatus) in
         switch status {
         case .notDetermined:
@@ -30,11 +30,12 @@ func loadPhotoLibrary() -> PHFetchResult<PHAsset> {
             //return nil
         case .authorized:
             print("YES")
-            let photos = PHAsset.fetchAssets(with: .image, options: PHFetchOptions())
-            print("\(photos.count) found!")
-            photoArray = photos
+            photoLib = PHAsset.fetchAssets(with: .image, options: PHFetchOptions())
+            print("\(photoLib.count) found!")
+            //photoArray = photos
             //return photos
         }
     })
-    return photoArray
+    //return photoArray
 }
+*/
