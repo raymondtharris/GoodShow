@@ -44,6 +44,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
         
         // Set Cell Data
+        goodshowCell.image.image = goodshowCell.fetchImage(asset: goodshowEvents.object(at: indexPath.row))
         goodshowCell.mediaCount.text = "4"
         goodshowCell.dateUpdated.text = goodshowCell.formatDateString(aDate: goodshowEvents.object(at: indexPath.row).creationDate!)
         return goodshowCell
@@ -101,4 +102,16 @@ class goodshowEventCell: UICollectionViewCell {
         return goodshowCellDateFormatter.string(from: aDate)
     }
     
+    func fetchImage(asset:PHAsset) -> UIImage {
+        let imageManager = PHImageManager.default()
+        let requestOptions = PHImageRequestOptions()
+        requestOptions.isSynchronous = true
+        
+        var image = UIImage()
+        imageManager.requestImage(for: asset, targetSize: CGSize(width: self.image.bounds.width, height: self.image.bounds.height), contentMode: .aspectFit, options: requestOptions, resultHandler: { (result, info) -> Void in
+            image = result!
+        })
+        return image
+        
+    }
 }
