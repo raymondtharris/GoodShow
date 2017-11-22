@@ -40,10 +40,12 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let goodshowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "goodshowCell", for: indexPath) as! goodshowEventCell
-        goodshowCell.layer.masksToBounds = true
-        goodshowCell.layer.cornerRadius = 6.0
+        
+        
+        
+        // Set Cell Data
         goodshowCell.mediaCount.text = "4"
-        goodshowCell.dateUpdated.text = "aDate"
+        goodshowCell.dateUpdated.text = goodshowCell.formatDateString(aDate: goodshowEvents.object(at: indexPath.row).creationDate!)
         return goodshowCell
     }
     
@@ -82,6 +84,21 @@ class goodshowEventCell: UICollectionViewCell {
     @IBOutlet weak var dateUpdated: UILabel!
     @IBOutlet weak var mediaCount: UILabel!
     
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        self.layer.cornerRadius = 10.0
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.masksToBounds = true
+
+        
+    }
     
+    func formatDateString(aDate: Date) -> String {
+        let goodshowCellDateFormatter = DateFormatter()
+        goodshowCellDateFormatter.dateFormat = "MMM dd"
+        return goodshowCellDateFormatter.string(from: aDate)
+    }
     
 }
