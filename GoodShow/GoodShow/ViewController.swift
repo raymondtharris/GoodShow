@@ -46,8 +46,8 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
         // Set Cell Data
         goodshowCell.image.image = goodshowCell.fetchImage(asset: goodshowEvents.object(at: indexPath.row))
-        goodshowCell.mediaCount.text = goodshowCell.fetchLocationString(aLocation: goodshowEvents.object(at: indexPath.row).location)
-        //print("\(aLocation: goodshowEvents.object(at: indexPath.row).location)")
+        goodshowCell.mediaCount.text = "1"
+        goodshowCell.userCount.text = "1"
         goodshowCell.dateUpdated.text = goodshowCell.formatDateString(aDate: goodshowEvents.object(at: indexPath.row).creationDate!)
         return goodshowCell
     }
@@ -86,6 +86,7 @@ class goodshowEventCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var dateUpdated: UILabel!
     @IBOutlet weak var mediaCount: UILabel!
+    @IBOutlet weak var userCount: UILabel!
     
     var imageText:String = ""
     
@@ -99,6 +100,17 @@ class goodshowEventCell: UICollectionViewCell {
         
         self.dateUpdated.textColor = UIColor.gray
         self.mediaCount.textColor = UIColor.gray
+        self.userCount.textColor = UIColor.gray
+        
+        /*
+        let gradientView = UIView(frame: image.frame)
+        let textShadowGradientLayer = CAGradientLayer()
+        textShadowGradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        textShadowGradientLayer.locations = [0.0, 1.0]
+        gradientView.layer.insertSublayer(textShadowGradientLayer, at: 0)
+        image.addSubview(gradientView)
+        image.bringSubview(toFront: gradientView)
+        */
         
     }
     
@@ -151,8 +163,8 @@ class goodshowEventCell: UICollectionViewCell {
         let textFontAttributes = [NSAttributedStringKey.font: textFont, NSAttributedStringKey.foregroundColor: textColor,] as [NSAttributedStringKey : Any]
         
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-        
-        let rect = CGRect(x: 10, y: imageView.bounds.height , width: image.size.width, height: image.size.height)
+       // print(imageView.frame.h)
+        let rect = CGRect(x: 10, y: imageView.frame.height , width: image.size.width, height: image.size.height)
         locationString.draw(in: rect, withAttributes: textFontAttributes)
         
         let newImageWithText = UIGraphicsGetImageFromCurrentImageContext()
