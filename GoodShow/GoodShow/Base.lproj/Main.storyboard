@@ -24,7 +24,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbl-Tr-xg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="82"/>
+            <point key="canvasLocation" x="-986" y="543"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OIr-GQ-gKU">
+            <objects>
+                <viewController id="AAk-IV-kcf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5e-Pj-pYv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3Aq-Qq-fP7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8My-Hv-ZxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="-876"/>
         </scene>
         <!--Item 3-->
         <scene sceneID="SaV-ml-cnO">
@@ -40,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nu3-kN-Qf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="2"/>
+            <point key="canvasLocation" x="370" y="92"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kbT-Ju-KaX">
@@ -61,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-1321" y="-459"/>
         </scene>
-        <!--Item 1-->
+        <!--You-->
         <scene sceneID="SuC-uA-H7V">
             <objects>
                 <viewController id="CqT-3q-ZYh" customClass="ViewController" customModule="GoodShow" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,14 +146,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kwb-t7-zoL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="avO-TM-8gB"/>
+                    <tabBarItem key="tabBarItem" title="You" id="avO-TM-8gB"/>
                     <connections>
                         <outlet property="goodshowCollectionView" destination="z9v-04-aOU" id="Fse-hQ-HN1"/>
+                        <segue destination="AAk-IV-kcf" kind="custom" id="Wah-6A-WDP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-Vz-fYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87.200000000000003" y="-812.74362818590714"/>
+            <point key="canvasLocation" x="-193" y="-1145"/>
         </scene>
     </scenes>
 </document>
