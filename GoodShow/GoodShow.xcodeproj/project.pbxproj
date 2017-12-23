@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220843621FD3596E00D51C0D /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220843611FD3596E00D51C0D /* EventViewController.swift */; };
+		220843641FD3745600D51C0D /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220843631FD3745600D51C0D /* Media.swift */; };
 		22BB08DB1FC0BBD200121DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB08DA1FC0BBD200121DCB /* AppDelegate.swift */; };
 		22BB08DD1FC0BBD300121DCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB08DC1FC0BBD300121DCB /* ViewController.swift */; };
 		22BB08E01FC0BBD300121DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BB08DE1FC0BBD300121DCB /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		220843611FD3596E00D51C0D /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		220843631FD3745600D51C0D /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Media.swift; path = Models/Media.swift; sourceTree = "<group>"; };
 		22BB08D71FC0BBD200121DCB /* GoodShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BB08DA1FC0BBD200121DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22BB08DC1FC0BBD300121DCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,10 +107,12 @@
 			children = (
 				22BB08DA1FC0BBD200121DCB /* AppDelegate.swift */,
 				22BB08DC1FC0BBD300121DCB /* ViewController.swift */,
+				220843611FD3596E00D51C0D /* EventViewController.swift */,
 				22BB08DE1FC0BBD300121DCB /* Main.storyboard */,
 				22BB08E11FC0BBD300121DCB /* Assets.xcassets */,
 				22BB08E31FC0BBD300121DCB /* LaunchScreen.storyboard */,
 				22BB08E61FC0BBD300121DCB /* Info.plist */,
+				220843631FD3745600D51C0D /* Media.swift */,
 				22BB09081FC0BD3800121DCB /* User.swift */,
 				22BB090A1FC0BECF00121DCB /* Event.swift */,
 			);
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				220843621FD3596E00D51C0D /* EventViewController.swift in Sources */,
 				22BB090B1FC0BECF00121DCB /* Event.swift in Sources */,
+				220843641FD3745600D51C0D /* Media.swift in Sources */,
 				22BB08DD1FC0BBD300121DCB /* ViewController.swift in Sources */,
 				22BB08DB1FC0BBD200121DCB /* AppDelegate.swift in Sources */,
 				22BB09091FC0BD3800121DCB /* User.swift in Sources */,
@@ -435,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68W5V575MP;
 				INFOPLIST_FILE = GoodShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raymondtharris.GoodShow;
@@ -449,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 68W5V575MP;
 				INFOPLIST_FILE = GoodShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raymondtharris.GoodShow;

@@ -13,6 +13,7 @@ import Photos
 
 class goodshowEvent{
     var name: String = ""
+    var media:Array<goodShowMedia> = []
 }
 
 /*
